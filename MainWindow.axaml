@@ -1,0 +1,45 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaSuperShape.MainWindow"
+        Title="AvaloniaSuperShape"
+        Width="780" Height="460">
+    <DockPanel>
+        <StackPanel Margin="5 0 0 0" Width="320" DockPanel.Dock="Right" Spacing="5">
+            <DockPanel>
+                <TextBlock Width="20" VerticalAlignment="Center">M</TextBlock>
+                <NumericUpDown Increment="1" Minimum="0" Name="mMUpDown" Margin="5"></NumericUpDown>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Width="20" VerticalAlignment="Center">A</TextBlock>
+                <NumericUpDown Increment="0.1" Minimum="0" Name="mAUpDown" Margin="5"></NumericUpDown>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Width="20" VerticalAlignment="Center">B</TextBlock>
+                <NumericUpDown Increment="0.1" Minimum="0" Name="mBUpDown" Margin="5"></NumericUpDown>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Width="20" VerticalAlignment="Center">N1</TextBlock>
+                <NumericUpDown Increment="0.1" Minimum="0" Name="mN1UpDown" Margin="5"></NumericUpDown>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Width="20" VerticalAlignment="Center">N2</TextBlock>
+                <NumericUpDown Increment="0.1" Minimum="0" Name="mN2UpDown" Margin="5"></NumericUpDown>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Width="20" VerticalAlignment="Center">N3</TextBlock>
+                <NumericUpDown Increment="0.1" Minimum="0" Name="mN3UpDown" Margin="5"></NumericUpDown>
+            </DockPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 20 0 0" Spacing="30">
+                <ToggleSwitch Content="Animations" Name="mAnimationsToggleSwitch"></ToggleSwitch>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 20 0 0">
+                <TextBlock>Size</TextBlock>
+                <Slider Name="mAspectRatioSlider" Margin="0 2 0 0 " Minimum="0.01" Maximum="2" Value="1" Width="100" HorizontalAlignment="Left"></Slider>
+            </StackPanel>
+        </StackPanel>
+        <DockPanel Name="mCanvas" Background="LightGray" />
+    </DockPanel>
+</Window>
