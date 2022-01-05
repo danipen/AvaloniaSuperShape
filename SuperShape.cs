@@ -106,10 +106,10 @@ namespace AvaloniaSuperShape
 
                 for (double angle = 0; angle <= 2 * Math.PI; angle += increment)
                 {
-                    var r = GetSupershapePoint(angle);
+                    var v = GetSupershapeValue(angle);
 
-                    var x = center.X + radiusX * r * Math.Cos(angle);
-                    var y = center.Y + radiusY * r * Math.Sin(angle);
+                    var x = center.X + radiusX * v * Math.Cos(angle);
+                    var y = center.Y + radiusY * v * Math.Sin(angle);
 
                     if (angle == 0)
                         context.BeginFigure(new Point(x, y), true);
@@ -123,7 +123,7 @@ namespace AvaloniaSuperShape
             return geometry;
         }
 
-        double GetSupershapePoint(double theta)
+        double GetSupershapeValue(double theta)
         {
             var part1 = (1 / A) * Math.Cos(theta * M / 4);
             part1 = Math.Abs(part1);
